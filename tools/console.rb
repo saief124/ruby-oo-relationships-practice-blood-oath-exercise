@@ -25,8 +25,8 @@ dave= Follower.new("Dave", 33);
 
 #Bloodoaths
 
-oath1= Bloodoath.new(b, ryan);
-oath2= Bloodoath.new(c, jessica);
+oath1= Bloodoath.new(b, ryan, 2019);
+oath2= Bloodoath.new(c, jessica, 2018);
 oath3= Bloodoath.new(d, dave);
 
 

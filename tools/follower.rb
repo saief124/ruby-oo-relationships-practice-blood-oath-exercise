@@ -1,6 +1,6 @@
 require_relative './bloodoaths.rb'
 class Follower
-    attr_accessor :cult
+    attr_accessor :cult, :join_date
     attr_reader :name, :age, :life_motto
     @@all=[]
 
@@ -25,10 +25,10 @@ class Follower
     outter_array.map {|i| i.cult}
     end
     
-    def join_cult (cult)
-        #if self.cults =! cult
-        Bloodoath.new(cult, self) 
-        end
+    def join_cult (cult, join_date)
+        
+        Bloodoath.new(cult, self, join_date)
+        
     end
 
 end

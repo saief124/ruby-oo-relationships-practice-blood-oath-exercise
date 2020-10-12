@@ -1,7 +1,7 @@
 require_relative './bloodoaths.rb'
 
 class Cult
-attr_accessor :follower
+attr_accessor :follower, :join_date
 attr_reader :name, :location, :founding_year, :slogan 
 @@all=[]
 
@@ -31,12 +31,13 @@ attr_reader :name, :location, :founding_year, :slogan
         @@all.select {|y| y.founding_year==year}
     end
 
-    def recruit_follower(follower)
-        Bloodoath.new(self, follower) 
+    def recruit_follower(follower, join_date)
+        Bloodoath.new(self, follower, join_date) 
     end
 
     def cult_population
-       # @follower.length
+       outter_array=Bloodoath.all.select{|c| c.cult==self}
+       all_followers=outter_array.map {|i| i.follower}
     end
 
 end
